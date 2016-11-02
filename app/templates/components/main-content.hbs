@@ -1,0 +1,12 @@
+{{#each regionList as |region|}}
+  <h5 style="display: inline-block;" {{action 'changeRegion' region}}>{{region}}</h5>
+{{/each}}
+
+{{#each mainHeadlines as |article|}}
+  {{#if (eq article.region defaultRegion)}}
+    <h6>{{article.type}}</h6>
+    <h4>{{article.headline}}</h4>
+    <h6>{{article.byline}}</h6>
+    <p>{{article.text}}</p>
+  {{/if}}
+{{/each}}
