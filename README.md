@@ -3,6 +3,8 @@
 
 **HINT: Click the headline to change the language**
 
+**NOTE: Carousel currently rotates every 10 seconds. Did this to demonstrate functionality. If this were production, I'd bump it up to 15.**
+
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
 
