@@ -1,7 +1,7 @@
 <div class="earth">
   {{#if defaultLanguage}}
     <div class="text-align-center">
-      <h1 {{action 'switchLanguage'}} class="pointer padding-top padding-bottom theme-font inline-block color-bright-purple text-align-center">- Earth News -</h1>
+      <h1 {{action 'switchLanguage'}} class="pointer main-logo padding-top padding-bottom theme-font inline-block color-bright-purple text-align-center">- Earth News -</h1>
     </div>
     {{#each mainHeadlines as |article|}}
       {{#if (eq article.region defaultRegion)}}
@@ -21,7 +21,7 @@
 <div class="martian">
   {{#unless defaultLanguage}}
     <div class="text-align-center">
-      <h1 {{action 'switchLanguage'}} class="pointer padding-top padding-bottom theme-font inline-block color-bright-purple text-align-center">~ Martian News ~</h1>
+      <h1 {{action 'switchLanguage'}} class="pointer main-logo padding-top padding-bottom theme-font inline-block color-bright-purple text-align-center">~ Martian News ~</h1>
     </div>
     {{#each mainHeadlines as |article|}}
       {{#if (eq article.region defaultRegion)}}

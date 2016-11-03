@@ -1,7 +1,11 @@
-.headline-font {
+&.headline-font {
   font-family: 'Lora', Helvetica;
   letter-spacing: 0.6px;
   text-transform: uppercase;
+  &:hover {
+    color: #d4fd02;
+    opacity: 0.9;
+  }
 }
 
 .uppercase {
@@ -14,7 +18,7 @@
 }
 
 .background-color-black {
-  background-color: black;
+  background-color: #111111;
 }
 
 .pointer {
@@ -55,6 +59,13 @@
 
 .theme-font {
   font-family: 'Roboto Mono', monospace;
+}
+
+.main-logo {
+  &:hover {
+    color: #d4fd02;
+    opacity: 0.8;
+  }
 }
 
 .color-white {
