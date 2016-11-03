@@ -1,41 +1,16 @@
 <h5 {{action 'changeToEnglish'}}>English</h5>
 <h5 {{action 'changeToMartian'}}>Martian</h5>
-{{#if (eq defaultLanguage 'English')}}
-  {{#each regionList as |region|}}
-    <h5 style="display: inline-block;" {{action 'changeRegion' region}}>{{region}}</h5>
-  {{/each}}
 
   {{#each mainHeadlines as |article|}}
     {{#if (eq article.region defaultRegion)}}
-      {{top-headline article=article}}
+      {{top-headline article=article defaultLanguage=defaultLanguage}}
     {{/if}}
+  {{/each}}
+  {{#each mainHeadlines as |article|}}
     {{#if (not-eq article.region defaultRegion)}}
       <h6>{{article.type}}</h6>
       <h4>{{article.headline}}</h4>
       <h6>{{article.byline}}</h6>
       <p>{{article.text}}</p>
     {{/if}}
-    
   {{/each}}
-{{else}}
-  {{#each martianRegionList as |region|}}
-    <h5 style="display: inline-block;" {{action 'changeRegion' region}}>{{region}}</h5>
-  {{/each}}
-
-  {{#each mainHeadlines as |article|}}
-    {{#if (eq defaultRegion 'All')}}
-      <h6>{{format-maritian article.type}}</h6>
-      <img src="{{article.image}}" alt="">
-      <h4>{{format-maritian article.headline}}</h4>
-      <h6>{{format-maritian article.byline}}</h6>
-      <p>{{format-maritian article.text}}</p>
-    {{else}}
-      {{#if (eq article.region defaultRegion)}}
-        <h6>{{format-maritian article.type}}</h6>
-        <h4>{{format-maritian article.headline}}</h4>
-        <h6>{{format-maritian article.byline}}</h6>
-        <p>{{format-maritian article.text}}</p>
-      {{/if}}
-    {{/if}}
-  {{/each}}
-{{/if}}

@@ -1,5 +1,30 @@
 <div class="top-headline">
-  <div class="top-headline-background-image">
-    <h6>tony</h6>
+  <div class="top-headline-background-image" style="background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url({{article.image}}) no-repeat center center fixed; background-size: cover;">
+    <div class="headline-details show-for-medium-up">
+      <h3 class="headline-font padding-horizontal-5p large-12">
+        {{#if (eq defaultLanguage 'Martian')}}
+          {{format-maritian article.headline}}
+        {{else}}
+          {{article.headline}}
+        {{/if}}
+      </h3>
+      <h5 class="padding-horizontal-5p large-12">
+        {{#if (eq defaultLanguage 'Martian')}}
+          {{format-maritian article.text}}
+        {{else}}
+          {{article.text}}
+        {{/if}}
+      </h5>
+    </div>
+    <div class="headline-details-small show-for-small-only">
+      <h3 class="headline-font padding-horizontal-5p large-12">
+        {{#if (eq defaultLanguage 'Martian')}}
+          {{format-maritian article.headline}}
+        {{else}}
+          {{article.headline}}
+        {{/if}}
+      </h3>
+    </div>
+    
   </div>
 </div>
