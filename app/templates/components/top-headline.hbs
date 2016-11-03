@@ -24,6 +24,13 @@
           {{format-maritian article.headline}}
         {{/if}}
       </h3>
+      <h5 class="padding-horizontal-5p margin-bottom-2x color-white large-12">
+        {{#if defaultLanguage}}
+          {{article.text}}
+        {{else}}
+          {{format-maritian article.text}}
+        {{/if}}
+      </h5>
     </div>
     
   </div>
