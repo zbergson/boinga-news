@@ -14,7 +14,8 @@ export default Ember.Route.extend({
     let articleData = model;
     let regionList = [];
     let mainHeadlines = [];
-    let defaultRegion = this.get('defaultRegion');
+
+    regionList.push('All');
 
     articleData.forEach(function(data){
       regionList.push(data.strap);
@@ -24,5 +25,21 @@ export default Ember.Route.extend({
 
     controller.set('regionList', regionList);
     controller.set('mainHeadlines', mainHeadlines);
+
+    
+
+    let martianRegionList = [];
+    let martianMainHeadlines = [];
+
+    regionList.forEach(function(data) {
+      if (data.length > 3) {
+        data = "Boinga";
+      }
+
+      martianRegionList.push(data);
+    });
+
+    controller.set('martianRegionList', martianRegionList);
+    
   }
 });
