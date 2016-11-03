@@ -1,5 +1,12 @@
 <div class="sub-content">
-  <h6 class="color-bright-purple theme-font">{{date-converter article.date}}</h6>
+  <h6 class="color-bright-purple theme-font">
+    {{#if defaultLanguage}}
+      {{article.type}} -
+    {{else}}
+      {{format-maritian article.type}} -
+    {{/if}}
+    {{date-converter article.date}}
+  </h6>
   <img src="{{article.image}}" class="margin-bottom-half" alt="">
   <div class="article-package">
     <h4 class="color-white pointer headline-font">
