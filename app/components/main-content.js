@@ -11,7 +11,13 @@ const {
 export default Component.extend({
 
   defaultRegion: 'Africa',
-  defaultLanguage: 'English',
+  defaultLanguage: true,
+
+  classNames: ['main-content'],
+
+  classNameBindings: ['changeLogo'],
+
+  changeLogo: false,
 
   regionCycle: ['Africa', 'Asia', 'Brussels Real Time', 'Canada', 'China', 'China Real Time', 'Economy', 'Europe', 'India Real Time', 'Latin America', 'Middle East'],
 
@@ -35,7 +41,7 @@ export default Component.extend({
   },
 
   scheduleCycle() {
-    set(this, 'timer', run.later(this, this.startCycle, 6000));
+    set(this, 'timer', run.later(this, this.startCycle, 10000));
   },
 
   actions: {
@@ -43,12 +49,9 @@ export default Component.extend({
       this.set('defaultRegion', region);
     },
 
-    changeToEnglish() {
-     this.set('defaultLanguage', 'English');
-    },
-
-    changeToMartian() {
-      this.set('defaultLanguage', 'Martian');
+    switchLanguage() {
+      this.toggleProperty('defaultLanguage');
+      this.toggleProperty('changeLogo');
     }
   }
 });

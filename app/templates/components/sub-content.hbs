@@ -1,0 +1,30 @@
+<div class="sub-content">
+  <h6 class="color-bright-purple theme-font">{{date-converter article.date}}</h6>
+  <img src="{{article.image}}" class="margin-bottom-half" alt="">
+  <div class="article-package">
+    <h4 class="color-white pointer headline-font">
+      {{#if defaultLanguage}}
+        {{article.headline}}
+      {{else}}
+        {{format-maritian article.headline}}
+      {{/if}}
+    </h4>
+    {{#if article.byline}}
+      <h6 class="color-bright-purple margin-bottom theme-font">
+        By
+        {{#if defaultLanguage}} 
+          {{article.byline}}
+        {{else}}
+          {{format-maritian article.byline}}
+        {{/if}}
+      </h6>
+    {{/if}}
+    <h5 class="color-white display-text">
+      {{#if defaultLanguage}} 
+        {{article.text}}
+      {{else}}
+        {{format-maritian article.text}}
+      {{/if}}
+    </h5>
+  </div>
+</div>

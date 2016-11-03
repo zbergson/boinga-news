@@ -1,0 +1,30 @@
+.main-content {
+  $logo-transition-duration: 250ms;
+
+  .martian {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity $logo-transition-duration;
+  }
+
+  .earth {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 400ms;
+  }
+
+  &.change-logo {
+    .martian {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 400ms;
+    }
+
+    .earth {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity $logo-transition-duration;
+    }
+  }
+
+}

@@ -1,5 +1,5 @@
 .headline-font {
-  font-family: 'Bevan', Helvetica;
+  font-family: 'Lora', Helvetica;
   letter-spacing: 0.6px;
   text-transform: uppercase;
 }
@@ -15,4 +15,60 @@
 
 .background-color-black {
   background-color: black;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.padding-top {
+  padding-top: 1rem;
+}
+
+.padding-bottom {
+  padding-bottom: 1rem;
+}
+
+.margin-bottom-2x {
+  margin-bottom: 3rem;
+}
+
+.margin-bottom {
+  margin-bottom: 1.5rem;
+}
+
+.margin-bottom-half {
+  margin-bottom: 0.75rem;
+}
+
+.margin-top {
+  margin-top: 1.5rem;
+}
+
+.margin-top-2x {
+  margin-top: 3rem;
+}
+
+.theme-font {
+  font-family: 'Roboto Mono', monospace;
+}
+
+.color-white {
+  color: white;
+}
+
+.color-bright-purple {
+  color: #6653ff;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-right {
+  text-align: right;
 }

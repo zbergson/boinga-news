@@ -26,8 +26,6 @@ export default Ember.Route.extend({
     controller.set('regionList', regionList);
     controller.set('mainHeadlines', mainHeadlines);
 
-    
-
     let martianRegionList = [];
     let martianMainHeadlines = [];
 
