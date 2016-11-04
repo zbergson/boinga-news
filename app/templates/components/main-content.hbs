@@ -1,7 +1,16 @@
 <div class="earth">
-  {{#if defaultLanguage}}
-    <div class="text-align-center">
-      <h1 {{action 'switchLanguage'}} class="pointer main-logo padding-top padding-bottom theme-font inline-block color-bright-purple text-align-center">- Earth News -</h1>
+  {{#if (eq defaultLanguage 'English')}}
+    <div class="text-align-center background-color-black small-12 nav padding-top-half padding-bottom-half">
+      <h1 class="pointer main-logo theme-font inline-block color-bright-purple text-align-center"> 
+        -  Earth News -
+      </h1>
+      <br>
+      {{#if (not-eq defaultLanguage 'Martian')}}
+        <h6 {{action 'switchToMaritan'}} class="theme-font inline-block pointer language-picker color-white margin-right">• Martian</h6>
+      {{/if}}
+      {{#if (not-eq defaultLanguage 'Flamingo')}}
+        <h6 {{action 'switchToFlamingo'}} class="theme-font inline-block pointer language-picker color-white">• Flamingo</h6>
+      {{/if}}
     </div>
     {{#each mainHeadlines as |article|}}
       {{#if (eq article.region defaultRegion)}}
@@ -19,9 +28,18 @@
   {{/if}}
 </div>
 <div class="martian">
-  {{#unless defaultLanguage}}
-    <div class="text-align-center">
-      <h1 {{action 'switchLanguage'}} class="pointer main-logo padding-top padding-bottom theme-font inline-block color-bright-purple text-align-center">~ Martian News ~</h1>
+  {{#if (eq defaultLanguage 'Martian')}}
+    <div class="text-align-center background-color-black small-12 nav padding-top-half padding-bottom-half">
+      <h1 class="pointer main-logo theme-font inline-block color-bright-purple text-align-center"> 
+        ~  Martian News ~
+      </h1>
+      <br>
+      {{#if (not-eq defaultLanguage 'Flamingo')}}
+        <h6 {{action 'switchToFlamingo'}} class="theme-font inline-block pointer language-picker color-white margin-right">• Flamingo</h6>
+      {{/if}}
+      {{#if (not-eq defaultLanguage 'English')}}
+        <h6 {{action 'switchToEnglish'}} class="theme-font inline-block pointer language-picker color-white">• English</h6>
+      {{/if}}
     </div>
     {{#each mainHeadlines as |article|}}
       {{#if (eq article.region defaultRegion)}}
@@ -29,11 +47,7 @@
       {{/if}}
     {{/each}}
     <h3 class="text-align-center theme-font color-bright-purple margin-top-2x margin-bottom-2x">
-      {{#if defaultLanguage}}
-        - Other Top News Stories -
-      {{else}}
-        {{format-maritian '- Other Top News Stories -'}}
-      {{/if}}
+      {{format-maritian '- Other Top News Stories -'}}
     </h3>
     <div class="padding-horizontal-5p row">
       {{#each mainHeadlines as |article|}}
@@ -42,5 +56,36 @@
         </div>
       {{/each}}
     </div>
-  {{/unless}}
+  {{/if}}
+</div>
+<div class="flamingo">
+  {{#if (eq defaultLanguage 'Flamingo')}}
+    <div class="text-align-center background-color-black small-12 nav padding-top-half padding-bottom-half">
+      <h1 class="pointer main-logo theme-font inline-block color-bright-purple text-align-center"> 
+        ~  Flamingo News ~
+      </h1>
+      <br>
+      {{#if (not-eq defaultLanguage 'Martian')}}
+        <h6 {{action 'switchToMaritan'}} class="theme-font inline-block pointer language-picker color-white margin-right">• Martian</h6>
+      {{/if}}
+      {{#if (not-eq defaultLanguage 'English')}}
+        <h6 {{action 'switchToEnglish'}} class="theme-font inline-block pointer language-picker color-white">• English</h6>
+      {{/if}}
+    </div>
+    {{#each mainHeadlines as |article|}}
+      {{#if (eq article.region defaultRegion)}}
+        {{top-headline article=article defaultLanguage=defaultLanguage}}
+      {{/if}}
+    {{/each}}
+    <h3 class="text-align-center theme-font color-bright-purple margin-top-2x margin-bottom-2x">
+      {{format-flamingo '- Other Top News Stories -'}}
+    </h3>
+    <div class="padding-horizontal-5p row">
+      {{#each mainHeadlines as |article|}}
+        <div class="inline-block columns margin-bottom large-offset-1 medium-offset-1 large-10 medium-10 small-12">
+          {{sub-content article=article defaultLanguage=defaultLanguage}}
+        </div>
+      {{/each}}
+    </div>
+  {{/if}}
 </div>

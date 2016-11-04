@@ -2,49 +2,73 @@
   <div class="top-headline-background-image" style="background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url({{article.image}}) no-repeat center center fixed; background-size: cover;">
     <div class="headline-details show-for-large-only">
       <h3 class="headline-font pointer color-white padding-horizontal-5p large-12">
-        {{#if defaultLanguage}}
+        {{#if (eq defaultLanguage 'English')}}
           {{article.headline}}
-        {{else}}
+        {{/if}}
+        {{#if (eq defaultLanguage 'Martian')}}
           {{format-maritian article.headline}}
+        {{/if}}
+        {{#if (eq defaultLanguage 'Flamingo')}}
+          {{format-flamingo article.headline}}
         {{/if}}
       </h3>
       <h5 class="padding-horizontal-5p margin-bottom-2x color-white large-12">
-        {{#if defaultLanguage}}
+        {{#if (eq defaultLanguage 'English')}}
           {{article.text}}
-        {{else}}
+        {{/if}}
+        {{#if (eq defaultLanguage 'Martian')}}
           {{format-maritian article.text 'text'}}
+        {{/if}}
+        {{#if (eq defaultLanguage 'Flamingo')}}
+          {{format-flamingo article.text 'text'}}
         {{/if}}
       </h5>
     </div>
     <div class="headline-details-medium show-for-medium-only">
       <h3 class="headline-font color-white padding-horizontal-5p large-12">
-        {{#if defaultLanguage}}
+        {{#if (eq defaultLanguage 'English')}}
           {{article.headline}}
-        {{else}}
+        {{/if}}
+        {{#if (eq defaultLanguage 'Martian')}}
           {{format-maritian article.headline}}
+        {{/if}}
+        {{#if (eq defaultLanguage 'Flamingo')}}
+          {{format-flamingo article.headline}}
         {{/if}}
       </h3>
       <h5 class="padding-horizontal-5p margin-bottom-2x color-white large-12">
-        {{#if defaultLanguage}}
+        {{#if (eq defaultLanguage 'English')}}
           {{article.text}}
-        {{else}}
+        {{/if}}
+        {{#if (eq defaultLanguage 'Martian')}}
           {{format-maritian article.text 'text'}}
+        {{/if}}
+        {{#if (eq defaultLanguage 'Flamingo')}}
+          {{format-flamingo article.text 'text'}}
         {{/if}}
       </h5>
     </div>
     <div class="headline-details-small show-for-small-only">
       <h3 class="headline-font color-white padding-horizontal-5p large-12">
-        {{#if defaultLanguage}}
+        {{#if (eq defaultLanguage 'English')}}
           {{article.headline}}
-        {{else}}
+        {{/if}}
+        {{#if (eq defaultLanguage 'Martian')}}
           {{format-maritian article.headline}}
+        {{/if}}
+        {{#if (eq defaultLanguage 'Flamingo')}}
+          {{format-flamingo article.headline}}
         {{/if}}
       </h3>
       <h5 class="padding-horizontal-5p margin-bottom-2x color-white large-12">
-        {{#if defaultLanguage}}
+        {{#if (eq defaultLanguage 'English')}}
           {{article.text}}
-        {{else}}
+        {{/if}}
+        {{#if (eq defaultLanguage 'Martian')}}
           {{format-maritian article.text 'text'}}
+        {{/if}}
+        {{#if (eq defaultLanguage 'Flamingo')}}
+          {{format-flamingo article.text 'text'}}
         {{/if}}
       </h5>
     </div>

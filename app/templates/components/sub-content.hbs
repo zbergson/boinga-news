@@ -1,36 +1,52 @@
 <div class="sub-content">
   <h6 class="color-bright-purple theme-font">
-    {{#if defaultLanguage}}
+    {{#if (eq defaultLanguage 'English')}}
       {{article.type}} -
-    {{else}}
+    {{/if}}
+    {{#if (eq defaultLanguage 'Martian')}}
       {{format-maritian article.type}} -
+    {{/if}}
+    {{#if (eq defaultLanguage 'Flamingo')}}
+      {{format-flamingo article.type}} -
     {{/if}}
     {{date-converter article.date}}
   </h6>
   <img src="{{article.image}}" class="margin-bottom-half" alt="">
   <div class="article-package">
     <h4 class="color-white pointer headline-font">
-      {{#if defaultLanguage}}
+      {{#if (eq defaultLanguage 'English')}}
         {{article.headline}}
-      {{else}}
+      {{/if}}
+      {{#if (eq defaultLanguage 'Martian')}}
         {{format-maritian article.headline}}
+      {{/if}}
+      {{#if (eq defaultLanguage 'Flamingo')}}
+        {{format-flamingo article.headline}}
       {{/if}}
     </h4>
     {{#if article.byline}}
       <h6 class="color-bright-purple margin-bottom theme-font">
         By
-        {{#if defaultLanguage}} 
+        {{#if (eq defaultLanguage 'English')}}
           {{article.byline}}
-        {{else}}
+        {{/if}}
+        {{#if (eq defaultLanguage 'Martian')}}
           {{format-maritian article.byline}}
+        {{/if}}
+        {{#if (eq defaultLanguage 'Flamingo')}}
+          {{format-flamingo article.byline}}
         {{/if}}
       </h6>
     {{/if}}
     <h5 class="color-white display-text">
-      {{#if defaultLanguage}} 
+      {{#if (eq defaultLanguage 'English')}}
         {{article.text}}
-      {{else}}
+      {{/if}}
+      {{#if (eq defaultLanguage 'Martian')}}
         {{format-maritian article.text 'text'}}
+      {{/if}}
+      {{#if (eq defaultLanguage 'Flamingo')}}
+        {{format-flamingo article.text 'text'}}
       {{/if}}
     </h5>
   </div>

@@ -11,7 +11,7 @@ const {
 export default Component.extend({
 
   defaultRegion: 'Africa',
-  defaultLanguage: true,
+  defaultLanguage: 'English',
 
   classNames: ['main-content'],
 
@@ -49,9 +49,23 @@ export default Component.extend({
       this.set('defaultRegion', region);
     },
 
-    switchLanguage() {
-      this.toggleProperty('defaultLanguage');
-      this.toggleProperty('changeLogo');
+    switchToMaritan() {
+      this.set('defaultLanguage', 'Martian');
+      if (!get(this, 'changeLogo')) {
+        this.toggleProperty('changeLogo');
+      }
+    },
+
+    switchToEnglish() {
+      this.set('defaultLanguage', 'English');
+      if (get(this, 'changeLogo')) {
+        this.toggleProperty('changeLogo');
+      } 
+    },
+
+    switchToFlamingo() {
+      this.set('defaultLanguage', 'Flamingo');
     }
+
   }
 });
