@@ -8,12 +8,18 @@
     width: 100%;
 
     .headline-details {
-      top: 78%;
+      
+      margin-top: 450px;
+      position: absolute;
+    }
+
+    .headline-details-medium {
+      margin-top: 400px;
       position: absolute;
     }
 
     .headline-details-small {
-      top: 60%;
+      margin-top: 325px;
       position: absolute;
     }
   }
