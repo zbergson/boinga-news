@@ -1,7 +1,8 @@
 import Ember from 'ember';
 
 export function formatMaritian(params/*, hash*/) {
-  let wordChange = params.toString();
+  let firstParams = params[0]
+  let wordChange = firstParams.toString();
   let martianTransformation = wordChange.split(' ');
   let martianArray = [];
   if (martianTransformation.length > 1) {
