@@ -44,8 +44,9 @@ export function formatMaritian(params/*, hash*/) {
     })
     
     let makeSureFirstCapitalized = martianArray[0];
-    if (makeSureFirstCapitalized.length > 3) {
+    if (makeSureFirstCapitalized.length > 3 && params[1] == 'text') {
       martianArray[0] = "Boinga";
+      martianArray.shift();
     }
 
     return martianArray.join(" ");
