@@ -18,10 +18,13 @@
       {{/if}}
     {{/each}}
     <h3 class="text-align-center theme-font color-bright-purple margin-top-2x margin-bottom-2x">- Other Top News Stories -</h3>
-    <div class="padding-horizontal-5p row">
+    <div class="row padding-horizontal-5p">
       {{#each mainHeadlines as |article|}}
-        <div class="inline-block columns margin-bottom large-offset-1 medium-offset-1 large-10 medium-10 small-12">
+        <div class="columns image-height show-for-large margin-bottom-2x large-6">
           {{sub-content article=article defaultLanguage=defaultLanguage}}
+        </div>
+        <div class="columns show-for-medium-down margin-bottom medium-offset-1 medium-10 small-12">
+          {{sub-content class="columns" article=article defaultLanguage=defaultLanguage}}
         </div>
       {{/each}}
     </div>
@@ -49,10 +52,13 @@
     <h3 class="text-align-center theme-font color-bright-purple margin-top-2x margin-bottom-2x">
       {{format-maritian '- Other Top News Stories -'}}
     </h3>
-    <div class="padding-horizontal-5p row">
+    <div class="row padding-horizontal-5p">
       {{#each mainHeadlines as |article|}}
-        <div class="inline-block columns margin-bottom large-offset-1 medium-offset-1 large-10 medium-10 small-12">
+        <div class="columns image-height show-for-large margin-bottom-2x large-6">
           {{sub-content article=article defaultLanguage=defaultLanguage}}
+        </div>
+        <div class="columns show-for-medium-down margin-bottom medium-offset-1 medium-10 small-12">
+          {{sub-content class="columns" article=article defaultLanguage=defaultLanguage}}
         </div>
       {{/each}}
     </div>
@@ -80,10 +86,13 @@
     <h3 class="text-align-center theme-font color-bright-purple margin-top-2x margin-bottom-2x">
       {{format-flamingo '- Other Top News Stories -'}}
     </h3>
-    <div class="padding-horizontal-5p row">
+    <div class="row padding-horizontal-5p">
       {{#each mainHeadlines as |article|}}
-        <div class="inline-block columns margin-bottom large-offset-1 medium-offset-1 large-10 medium-10 small-12">
+        <div class="columns image-height show-for-large margin-bottom-2x large-6">
           {{sub-content article=article defaultLanguage=defaultLanguage}}
+        </div>
+        <div class="columns show-for-medium-down margin-bottom medium-offset-1 medium-10 small-12">
+          {{sub-content class="columns" article=article defaultLanguage=defaultLanguage}}
         </div>
       {{/each}}
     </div>

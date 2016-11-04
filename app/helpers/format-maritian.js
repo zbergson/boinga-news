@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export function formatMaritian(params/*, hash*/) {
-  let firstParams = params[0]
+  let firstParams = params[0];
   let wordChange = firstParams.toString();
   let martianTransformation = wordChange.split(' ');
   let martianArray = [];
@@ -45,7 +45,7 @@ export function formatMaritian(params/*, hash*/) {
     })
     
     let makeSureFirstCapitalized = martianArray[0];
-    if (makeSureFirstCapitalized.length > 3 && params[1] == 'text') {
+    if (makeSureFirstCapitalized.length > 3 && params[1] === 'text') {
       martianArray[0] = "Boinga";
       martianArray.shift();
     }
@@ -56,8 +56,8 @@ export function formatMaritian(params/*, hash*/) {
   else {
     
     if (params.length > 3) {
-      params = ''
-      return params
+      params = '';
+      return params;
     }
 
     else {
